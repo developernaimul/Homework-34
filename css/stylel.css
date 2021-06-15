@@ -1,0 +1,641 @@
+/*---------------------------------------------------------------------
+* Template Name    : Finix | Responsive Bootstrap 5 Personal Template
+* Author           : SRBThemes
+* Version          : 1.0.0
+* Created          : June 2021
+* File Description : Main css file of the template
+* Designer         : Developer Naimul
+*----------------------------------------------------------------------
+*/
+
+/*********************************
+    1.BASIC
+    2.HELPER
+    3.NAVBAR
+    4.SLIDER
+    5.PARTNER 
+    6.ABOUT
+    7.CHOOSE-US
+    8.WORK
+    9.CONTACT
+    10.FOOTER
+    11.RESPONSIVE
+**********************************/
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+@import url('');
+
+/*================================
+             1.BASIC
+==================================
+*/
+
+body,
+span,
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+    font-family: 'Rubik', sans-serif;
+}
+
+a,
+a:hover,
+a:focus,
+button,
+button:focus,
+input:focus {
+    text-decoration: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+img {
+    max-width: 100%;
+}
+
+::selection {
+    background: rgba(166, 175, 189, 0.3);
+}
+
+::-moz-selection {
+    background: rgba(166, 175, 189, 0.3);
+}
+
+/*================================
+             2.HELPER
+==================================
+*/
+/****** CUSTOM CONTAINER ******/
+.custom-nav .container-fluid,
+.slider-section .container-fluid {
+    max-width: 1300px;
+}
+
+/***** SECTION PADDINT ******/
+.ptb-100 {
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
+}
+
+.pt-100 {
+    padding-top: 100px !important;
+}
+
+.pt-70 {
+    padding-top: 70px !important;
+}
+
+.pb-100 {
+    padding-bottom: 100px !important;
+}
+
+.pb-70 {
+    padding-bottom: 70px !important;
+}
+
+/****** BACGROUND COLOR ******/
+.bg-gry {
+    background-color: #f9fafb !important;
+}
+
+/***** ANIMETED JS BUTTON ******/
+.btn-finix {
+    position: relative;
+    padding: 10px 40px;
+    display: inline-block;
+    background: #e73c3e;
+    color: #ffffff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
+    transition: 0.5s ease-in-out;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-finix:hover {
+    color: #fff;
+}
+
+.btn-finix span {
+    position: absolute;
+    display: block;
+    width: 0px;
+    height: 0px;
+    transform: translate(-50%,-50%);
+    border-radius: 4px;
+    background: #111111;
+    transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+    z-index: -1;
+}
+
+.btn-finix:hover span {
+    width: 350px;
+    height: 350px;
+}
+
+/****** DEFULT CSS BUTTON */
+body .btn-primary {
+    background: #e73c3e !important;
+    border: transparent !important;
+    border-radius: 5px;
+    padding: 10px 40px;
+    position: relative;
+    z-index: 1;
+}
+
+body .btn-primary::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    background: #111;
+    border-radius: 5px;
+    z-index: -1;
+    transition: 0.4s;
+}
+
+body .btn-primary:hover::after{
+    width: 100%;
+}
+
+body .btn-primary::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    background: #111;
+    border-radius: 5px;
+    z-index: -1;
+    transition: 0.4s;
+}
+
+body .btn-primary:hover:before {
+    width: 100%;
+}
+
+/****** FINIX TEXT ******/
+
+/*--- .finix-text ---*/
+.finix-text span {
+    color: #e73c3e;
+}
+.finix-text h2 {
+    color: #111;
+    font-size: 36px;
+    margin-top: 10px;
+    margin-bottom: 14px;
+}
+
+.finix-text h3 {
+    font-size: 36px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 16px;
+}
+
+.finix-text p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+    color: #606060;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.finix-text strong {
+    font-size: 18px;
+    color: #606060;
+    font-weight: 400;
+}
+
+.finix-text ul {
+    padding-left: 0;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.finix-text ul li {
+    list-style: none;
+    color: #606060;
+    margin-bottom: 10px;
+}
+
+.finix-text ul li::before {
+    content: "\f00c";
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 600;
+    color: #e73c3e;
+    margin-right: 15px;
+}
+
+/*================================
+             3.NAVBAR
+==================================
+*/
+.navbar-brand img {
+    width: 150px !important;
+}
+
+/****** MENU ******/
+ul.main-header-menu li {
+    list-style: none;
+}
+
+ul.main-header-menu li a.finix-activ-menu {
+    color: #e73c3e;
+}
+
+ul.main-header-menu li a {
+    color: #111111;
+    padding: 27px 17px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: all .4s ease-in-out;
+}
+
+ul.main-header-menu li:hover > a{
+    color: #e73c3e;
+}
+
+ul.main-header-menu li a i{
+    font-size: 10px;
+    margin-left: 3px;
+}
+
+/****** DROPDOWN MENU 1 ******/
+ul.main-header-menu li {
+    position: relative;
+}
+
+ul.main-header-menu li ul {
+    position: absolute;
+    width: 220px;
+    top: 100%;
+    left: 19px;
+    background: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s ease-in-out;
+    transform: translateY(35px);
+}
+
+ul.main-header-menu li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(18px);
+}
+
+ul.main-header-menu li ul li a {
+    padding: 9px 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    transition: all .3s ease-in-out;
+    display: block;
+}
+
+ul.main-header-menu li ul li a:hover{
+    letter-spacing: 2px;
+}
+
+/****** DROPDOWN MENU 2 ******/
+ul.main-header-menu li ul li {
+    position: relative;
+}
+
+ul.main-header-menu li ul li ul {
+	position: absolute;
+	width: 220px;
+	top: -15px;
+	left: -220px;
+	background: #fff;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 0;
+	box-shadow: 0 0 15px 0 rgba(0,0,0,.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s ease-in-out;
+    transform: translateY(35px);
+}
+
+ul.main-header-menu li ul li:hover ul {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(18px);
+}
+
+ul.main-header-menu li ul li a span {
+    float: right;
+}
+
+
+/****** HEADER FORM ******/
+.header-search {
+    width: 50px;
+    text-align: center;
+    border-right: 1px solid #ddd;
+    margin-right: 24px;
+}
+
+.header-search span {
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.header-call {
+    width: 200px;
+}
+
+.header-call-icon {
+    float: left;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.header-call-icon span i{ 
+    font-size: 33px;
+    color: #e73c3e;
+    transform: rotate(-50deg);
+    margin-top: 7px;
+}
+
+.header-call-number span {
+    color: #696063;
+}
+
+.header-call .header-call-number a {
+    color: #111111;
+    font-size: 17px;
+}
+
+/*================================
+             4.SLIDER
+==================================
+*/
+.slider-section {
+    background: url(../img/main-banner2.jpg) no-repeat top center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.slider-desc {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.slider-content h6 {
+    color: #e73c3e;
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.slider-content h1 {
+    font-size: 60px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.slider-content p{
+    font-weight: 400;
+    color: #606060;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.header-social {
+    position: absolute;
+    left: 30px;
+    bottom: 0;
+}
+
+.header-social ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.header-social ul li span {
+    font-size: 18px;
+    display: inline-block;
+    margin-right: 50px;
+    position: relative;
+}
+
+.header-social ul li span::after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 40px;
+    background: #111;
+    left: 115%;
+    top: 50%;
+}
+
+.header-social ul li a {
+    display: inline-block;
+    color: #111;
+    font-size: 18px;
+    margin: 0 14px;
+}
+
+
+/*================================
+             5.PARTNER
+==================================
+*/
+.partner {
+    border-bottom: 1px solid #ddd;
+}
+
+.partner-logo ul {
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.partner-logo ul li {
+    list-style: none;
+}
+
+
+/*================================
+             6.ABOUT
+==================================
+*/
+.about-img {
+    position: relative;
+}
+
+.about-iner-img {
+    background: url(../img/about/shape.png) no-repeat center;
+    background-size: contain;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    bottom: 0;
+    right: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about-iner-text h3{
+    font-size: 70px;
+    color: #e73c3e;
+    margin-bottom: 5px;
+}
+
+.about-iner-text p {
+    color: #111;
+    font-weight: 500;
+}
+
+
+/*================================
+             7.CHOOSE-US
+==================================
+*/
+.choose-us-desc {
+    position: relative;
+}
+.play-button {
+    height: 90px;
+    width: 90px;
+    line-height: 92px;
+    background: #fff;
+    font-size: 60px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    color: #e73c3e;
+    position: absolute;
+    top: 78%;
+    left: 47%;
+    transition: 0.5s ease-in-out;
+}
+
+.play-button:hover {
+    background: #e73c3e;
+    color: #fff;
+}
+
+.play-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90px;
+    height: 90px;
+    background: #e73c3e;
+    border-radius: 50%;
+    animation: play-button 1.5s ease-in-out infinite;
+}
+
+@keyframes play-button {
+    0%{
+        transform: scale(0);
+        opacity: 0.9;
+    }
+    50%{
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+   
+    100%{
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+
+/****** CHOOSE ITEMS ******/
+.choose-us-desc{
+    padding-right: 30px;
+}
+
+.features-items .mtp-30 {
+   margin-top: 30px;
+}
+
+.features-items .mtm-30 {
+    margin-top: -30px;
+}
+
+.features-item-box {
+    background: #fff;
+    padding: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: .5s ease-in-out;
+}
+
+.features-item-box:hover {
+    transform: translateY(-15px);
+}
+
+.features-item-box::before {
+    content: "";
+    position: absolute;
+    background: #e73c3e;
+    top: -37%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 65%;
+    width: 90%;
+    border-radius: 50%;
+    opacity: 0.1;
+}
+
+
+.faatures-icon {
+    margin-bottom: 20px;
+}
+
+.faatures-icon i {
+    font-size: 30px;
+    color: #e73c3e;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1;
+    position: relative;
+    transition: .5s ease-in-out;
+}
+
+.features-item-box:hover .faatures-icon i {
+    background: #e73c3e;
+    color: #fff;
+}
+.features-item-box h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.features-item-box p {
+    color: #606060;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 0;
+}
